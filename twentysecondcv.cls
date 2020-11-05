@@ -186,12 +186,14 @@
 {\Large\color{black!80}\givencvjobtitle}
 \end{flushright}
 \renewcommand{\arraystretch}{1.6}
-\begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
+\begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{4.5cm}}
 \ifthenelse{\equal{\givencvdate}{}}{}{\textsc{\Large\icon{\Info}} & \givencvdate\\}
-\ifthenelse{\equal{\givencvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \givencvaddress\\}
 \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \givennumberphone\\}
+\ifthenelse{\equal{\givencvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \givencvaddress\\}
 \ifthenelse{\equal{\givencvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \href{\givencvsite}{\textcolor{cerulean}\givencvsite}\\}
 \ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\givencvmail}{\givencvmail}}
+
+
 \end{tabular}
 
 
@@ -205,7 +207,7 @@
 \noindent
 \scriptsize
 \noindent
-(*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
+(*)[The skill scale is from 0 (Fundamental Awareness) to 5 (Expert).]
 
 \end{flushleft}
 \end{textblock}
