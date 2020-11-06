@@ -94,7 +94,8 @@
 \newcommand{\cvdate}[1]{\renewcommand{\givencvdate}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\givencvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\givennumberphone}{#1}}
-\newcommand{\cvaddress}[1]{\renewcommand{\givencvaddress}{#1}}
+\newcommand{\cvaddressA}[1]{\renewcommand{\givencvaddressA}{#1}}
+\newcommand{\cvaddressB}[1]{\renewcommand{\givencvaddressB}{#1}}
 \newcommand{\cvsite}[1]{\renewcommand{\givencvsite}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\givenaboutme}{  \justifying#1}}
 \newcommand{\profilepic}[1]{\renewcommand{\givenprofilepic}{#1}}
@@ -105,7 +106,8 @@
 \newcommand{\givencvdate}{}
 \newcommand{\givencvmail}{}
 \newcommand{\givennumberphone}{}
-\newcommand{\givencvaddress}{} 
+\newcommand{\givencvaddressA}{}
+\newcommand{\givencvaddressB}{}
 \newcommand{\givenaboutme}{}
 \newcommand{\givenprofilepic}{}
 \newcommand{\givencvsite}{}
@@ -118,6 +120,8 @@
 \newcommand*\round[2]{%
   \tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm,
     text height=3.6mm,  fill=#2,#2,text=white](char){#1} ;}
+\newcommand*\bulletpoint[0]{\tikz[baseline=(char.base)]{
+	\node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {\bullet};}}
 
 \newcommand\skills[1]{ 
 
@@ -189,9 +193,9 @@
 \begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{4.5cm}}
 \ifthenelse{\equal{\givencvdate}{}}{}{\textsc{\Large\icon{\Info}} & \givencvdate\\}
 \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \givennumberphone\\}
-\ifthenelse{\equal{\givencvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \givencvaddress\\}
 \ifthenelse{\equal{\givencvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \href{\givencvsite}{\textcolor{cerulean}\givencvsite}\\}
-\ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\givencvmail}{\givencvmail}}
+\ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\givencvmail}{\givencvmail}\\}
+\ifthenelse{\equal{\givencvaddressA}{}}{}{\textsc{\Large\icon{\Letter}} & \givencvaddressA\newline\givencvaddressB}
 
 
 \end{tabular}
@@ -303,34 +307,46 @@
     {\footnotesize#4}\\%
     #5\vspace{\parsep}%
   }\\}
-  
+
 %%%%%%%%%%%%%%%%%%%%%%%%%
-% Small twenty List environment %
+% twenty list one column environment %
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\tabcolsep}{0pt}
-\newenvironment{twentyshort}{%
+\newenvironment{twentyO}{%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
 }{%
   \end{tabular*}
 }
 \renewcommand{\bfseries}{\color{headercolor}}
-\newcommand{\twentyitemshort}[2]{%
-  \hspace{5pt}#1&\parbox[t]{11.5cm}{%
-    \textbf{#2}%
+\newcommand{\twentyOitem}[3]{%
+  \hspace{5pt} \parbox[t]{13.5cm}{%
+    \textbf{#1}%
+    \hfill%
+    {\footnotesize#2}\\%
+    #3\vspace{\parsep}%
   }\\}
 
 \setlength{\tabcolsep}{0pt}
-\newenvironment{twentyshorticon}{%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% twenty list two column environment %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\tabcolsep}{0pt}
+\newenvironment{twentyT}{%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
 }{%
   \end{tabular*}
 }
 \renewcommand{\bfseries}{\color{headercolor}}
-\newcommand{\twentyitemshorticon}[3]{%
-  \hspace{3pt}\faicon{#1}\hspace{3pt}#2&
-      \parbox[t]{11.5cm}{%
-    \textbf{#3}%
+\newcommand{\twentyTitem}[3]{%
+  \hspace{25pt}  - & \parbox[t]{11.5cm}{%
+    \textbf{#1}%
+    \hfill%
+    {\footnotesize#2}\\%
+    #3\vspace{\parsep}%
   }\\}
+
+\setlength{\tabcolsep}{0pt}
 
 %%%%%%%%%%%%
 % Page Setting %
