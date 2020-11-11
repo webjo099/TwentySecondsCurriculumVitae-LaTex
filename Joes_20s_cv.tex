@@ -1,0 +1,140 @@
+\documentclass[]{Joes_20s_cv_class}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%
+%%PROFILE SIDE BAR%%
+%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%
+%%PERSONAL INFO%%%
+%%%%%%%%%%%%%%%%
+
+\profilepic{portrait HD.png} %path of profile pic
+\cvname{Joe Weber} %your name
+\cvjobtitle{Research assistant}%your actual job position
+\cvdate{23 August 1990}%date of birth
+\cvaddressA{Murwiesenstrasse 38}%address line 1
+\cvaddressB{8057 Zurich, Switzerland}%address line 2
+\cvnumberphone{+41 78 839 23 08}%telephone number
+\cvmail{webjo099@gmail.com}%e-mail
+\cvsite{}%personal site
+
+%About me section
+\aboutme{
+Life science researcher with a strong interests in image analyses and procedure optimization. Excellent analytical skills combined with a perspicacious mind make for a natural problem solver. Strong background in molecular biology techniques as well as imaging and data analyses. Self-learned coder, can automatise data analyses and visualization. A strong personal interest in developing new procedured and improving existing ones. Open-minded teamworker with strong mediator skills. Goal-oriented and efficient project manager with a smile.} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%Skill bar section, each skill must have a value between 0 an 5 (float)%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\skills{{Molecular biology/4.5},{Microscopy/4},{Image analysis/4.2},{Data analysis/4.2},{Python/3.5}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%Skill text section, each skill must have a value between 0 an 5%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\skillstext{{presentation/4},{publication/3},{flow cytometry/3}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%Language skills text section %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\languages{English, German and French at C1-C2 level}
+
+
+\makeprofile
+%%%%%%%%%%%%%%%%%%%%
+%%END PROFILE SIDE BAR%%
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%BODY%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%
+%%SIMPLE SECTION%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+\section{interests}
+\spacefive{Image analyses, assay development, flow cytometry}
+
+\section{education}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%TWENTY LIST ITEMS%%%%%%%%%%%%%%
+%%    Four arguments: date; title; where; description %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{date_3text}
+  \event
+    {2015-2020}
+    {Ph.D. {\normalfont candidate in Molecular Biology}}
+    {UZH, Zurich, Switzerland}
+    {Research field: Chromosome segregation in meiosis}
+  \event
+    {2013-2015}
+    {M.Sc.}
+    {UZH, Zurich, Switzerland}
+    {Majoring in Cellular and Molecular Biology}
+  \event
+    {2010-2013}
+    {B.Sc.}
+    {Unil, Lausanne, Switzerland}
+    {Majoring in Biology}
+  \event
+    {2005-2009}
+    {High school}
+    {Luxemburg, Luxemburg}
+    {Specializing in natural sciences and mathematics}
+\end{date_3text}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%TWENTY LIST SHORTITEMS%%%%%%%%%%%%%%
+%%% Two arguments: date; title/description %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{experience - Research assistant}
+
+\task
+    {Image analysis toolkit development}
+    {Image analyses, ImageJ, Python}
+    {To create a quantitative assay for chromosome segregation defects I developed a toolkit to analyse microscopy images of postmeiotic cells.}
+
+\task
+    {Automatising tissue isolation procedure}
+    {Method development, Flow cytometry}
+    {Sample availability is a major bottleneck in research on meiosis. I developed an automated tissue extraction procedure which increases extraction efficiency 10 fold and thus dramatically increases sample availability.}
+
+\task
+    {Ph.D. thesis}
+    {Project management, Experimental design, Molecular biology}
+    {Designed, performed, analysed and reported on research experiments in the context of a 5 year Ph.D. project.}
+
+\task
+    {Scientific publication}
+    {Publication, Teamwork}
+    {First author and main contributor of an impactful scientific publication. \href{https://doi.org/10.1371/journal.pgen.1008928}{https://doi.org/10.1371/journal.pgen.1008928}}
+
+%{A major challenge for research on meiotic cells in fruitflies is the fact that few cells of interest exist in each fly and that these cells are extracted by time-consuming hand-dissection. To overcome this problem I developed a semi-automated procedure which increases extraction efficiency 10 fold. Using this procedure it becomes possible to study meiosis in fruit flies using approches classically known to require high input sample amounts.}
+
+
+\section{other information}
+\spacefive{After growing up in Luxemburg I moved to Switzerland to study biology. My education led me to a solid base knowldege in biology as well as full working profficency language skills in english, german and french (C1-C2). Working as a research assistant during my Ph.D at University of Zurich then allowed me to aquire a broad set of technical and interpersonal skills, including molecular biology techniques, data analysis, mentoring and teamworking skills. This diverse skillset enabled me to make many valuable contributions in the research team by developing new methods, providing IT support and producing high quality research leading to an impactful scientific publication. For me, embracing new challenges is essential to grow and growth is at the core of personal happiness. In my free time I like to clear my mind by discovering the beauty of the swiss alps through climbing and hiking, or satisfy my need for competition in a match of beachvolleyball. I am currently looking for job positions in the region of Zurich, I am available right now and have a residence permit C.}
+
+\section{references}
+\referenceA{Prof. Dr. Christian Lehner\newline
+	Department of Molecular Life Sciences\newline
+	University of Zurich\newline
+	Winterthurerstrasse 190\newline
+	CH-8057 Zurich, Switzerland\newline
+	+41 44 635 48 71}
+\referenceB{Dr. Pablo Radermacher\newline
+	Waldbröl, NRW, Germany\newline
+	pablo.radermacher@leica-microsystems.com}
+\addreferences
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%%%%ENDBODY%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
+
+\end{document} 
